@@ -1,4 +1,3 @@
-# stage2_control_generator.py
 import json
 
 """

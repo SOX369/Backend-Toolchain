@@ -1,8 +1,5 @@
 import onnx
 import json
-import numpy as np
-from collections import OrderedDict
-
 
 class ONNXToNetworkStructure:
     def __init__(self, onnx_model_path):

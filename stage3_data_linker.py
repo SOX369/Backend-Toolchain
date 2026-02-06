@@ -1,4 +1,3 @@
-# stage3_data_linker.py
 import os
 import json
 import random

@@ -1,4 +1,3 @@
-# stage1_task_generator.py
 import os
 import json
 
@@ -102,7 +101,6 @@ def match_fc_operator(layer, target_out_features, operators):
 
 
 # ================= FC SUPPORT ADDED END =================
-
 
 def read_operator_excitation(op_path):
     """读取算子激励文件（op_jili.txt）内容"""

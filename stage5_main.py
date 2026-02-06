@@ -1,4 +1,3 @@
-# main.py
 import os
 import stage1_task_generator
 import stage2_control_generator
@@ -8,12 +7,9 @@ import stage4_address_modifier
 
 def run_pipeline():
 
-    # 配置参数
-    # 输入路径
-    NETWORK_PATH = "network_structure.json"
+    NETWORK_PATH = "network_structure_output.json"
     OP_LIBRARY_PATH = "Op_Library"
     DATA_DB_ROOT = "Data_Library"
-
     # 中间及输出文件路径
     OUTPUT_DIR = "pipeline_output"
 
