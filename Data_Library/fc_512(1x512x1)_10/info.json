@@ -1,8 +1,0 @@
-{
-  "operator_type": "FC",
-  "isPrevFC": false,
-  "in_features": [512],
-  "out_features": [10],
-  "weight_data": 512,
-  "output_data": 2
-}

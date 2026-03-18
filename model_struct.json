@@ -1,0 +1,1924 @@
+{
+  "model_info": {
+    "ir_version": 6,
+    "producer_name": "onnx.quantize",
+    "producer_version": "0.1.0",
+    "opset_import": [
+      {
+        "domain": "",
+        "version": 11
+      },
+      {
+        "domain": "com.microsoft.nchwc",
+        "version": 1
+      },
+      {
+        "domain": "com.microsoft.mlfeaturizers",
+        "version": 1
+      },
+      {
+        "domain": "ai.onnx.ml",
+        "version": 2
+      },
+      {
+        "domain": "ai.onnx.training",
+        "version": 1
+      },
+      {
+        "domain": "ai.onnx.preview.training",
+        "version": 1
+      },
+      {
+        "domain": "com.microsoft",
+        "version": 1
+      },
+      {
+        "domain": "com.microsoft.experimental",
+        "version": 1
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "name": "input_0",
+      "dtype": "FLOAT",
+      "shape": [
+        1,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "conv1.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        10
+      ]
+    },
+    {
+      "name": "conv2.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        10
+      ]
+    },
+    {
+      "name": "conv3.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv4.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv5.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv6.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv7.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv8.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "fc.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        10
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "dtype": "FLOAT",
+      "shape": [
+        1,
+        10
+      ]
+    }
+  ],
+  "initializers": [
+    {
+      "name": "conv1.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        10
+      ]
+    },
+    {
+      "name": "conv2.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        10
+      ]
+    },
+    {
+      "name": "conv3.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv4.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv5.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv6.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv7.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "conv8.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        20
+      ]
+    },
+    {
+      "name": "fc.bias",
+      "dtype": "FLOAT",
+      "shape": [
+        10
+      ]
+    },
+    {
+      "name": "/Concat_output_0",
+      "dtype": "INT64",
+      "shape": [
+        2
+      ]
+    },
+    {
+      "name": "conv1.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        10,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "conv1.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv1.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv1.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv2.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        10,
+        10,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "conv2.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv2.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv2.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv3.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        20,
+        10,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "conv3.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv3.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv3.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv4.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        20,
+        20,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "conv4.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv4.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv4.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv5.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        20,
+        20,
+        5,
+        5
+      ]
+    },
+    {
+      "name": "conv5.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv5.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv5.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv6.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        20,
+        20,
+        5,
+        5
+      ]
+    },
+    {
+      "name": "conv6.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv6.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv6.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv7.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        20,
+        20,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "conv7.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv7.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv7.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "conv8.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        20,
+        20,
+        3,
+        3
+      ]
+    },
+    {
+      "name": "conv8.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "conv8.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    },
+    {
+      "name": "conv8.bias_quantized_reshape_shape",
+      "dtype": "INT64",
+      "shape": [
+        4
+      ]
+    },
+    {
+      "name": "fc.weight_quantized",
+      "dtype": "INT8",
+      "shape": [
+        320,
+        10
+      ]
+    },
+    {
+      "name": "fc.weight_scale",
+      "dtype": "FLOAT",
+      "shape": []
+    },
+    {
+      "name": "fc.weight_zero_point",
+      "dtype": "INT8",
+      "shape": []
+    }
+  ],
+  "nodes": [
+    {
+      "name": "input_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "input_0"
+      ],
+      "outputs": [
+        "input_0_quantized",
+        "input_0_scale",
+        "input_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv1.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "input_0_scale",
+        "conv1.weight_scale"
+      ],
+      "outputs": [
+        "conv1.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv1/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "input_0_scale",
+        "conv1.weight_scale"
+      ],
+      "outputs": [
+        "/conv1/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv1/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "input_0_quantized",
+        "conv1.weight_quantized",
+        "input_0_zero_point",
+        "conv1.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv1/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv1.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv1.bias",
+        "conv1.bias_scale"
+      ],
+      "outputs": [
+        "conv1.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv1.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv1.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv1.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv1.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv1.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv1.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv1.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv1.bias_quantized",
+        "conv1.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv1/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv1.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv1/Conv_output_0_output_quantized",
+        "/conv1/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv1/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv1/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv1/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv1/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv1/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv1/Conv_output_0_bias_add_cast_output",
+        "/conv1/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv1/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv1/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Relu_output_0"
+      ],
+      "outputs": [
+        "/Relu_output_0_quantized",
+        "/Relu_output_0_scale",
+        "/Relu_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv2.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_output_0_scale",
+        "conv2.weight_scale"
+      ],
+      "outputs": [
+        "conv2.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv2/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_output_0_scale",
+        "conv2.weight_scale"
+      ],
+      "outputs": [
+        "/conv2/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv2/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/Relu_output_0_quantized",
+        "conv2.weight_quantized",
+        "/Relu_output_0_zero_point",
+        "conv2.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv2/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv2.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv2.bias",
+        "conv2.bias_scale"
+      ],
+      "outputs": [
+        "conv2.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv2.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv2.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv2.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv2.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv2.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv2.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv2.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv2.bias_quantized",
+        "conv2.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv2/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv2.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv2/Conv_output_0_output_quantized",
+        "/conv2/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv2/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv2/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv2/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv2/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv2/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv2/Conv_output_0_bias_add_cast_output",
+        "/conv2/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv2/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_1",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv2/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_1_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/pool1/MaxPool",
+      "op_type": "MaxPool",
+      "inputs": [
+        "/Relu_1_output_0"
+      ],
+      "outputs": [
+        "/pool1/MaxPool_output_0"
+      ],
+      "attributes": {
+        "ceil_mode": 0,
+        "kernel_shape": [
+          2,
+          2
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          2,
+          2
+        ],
+        "auto_pad": "NOTSET",
+        "storage_order": 0
+      }
+    },
+    {
+      "name": "/pool1/MaxPool_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/pool1/MaxPool_output_0"
+      ],
+      "outputs": [
+        "/pool1/MaxPool_output_0_quantized",
+        "/pool1/MaxPool_output_0_scale",
+        "/pool1/MaxPool_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv3.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/pool1/MaxPool_output_0_scale",
+        "conv3.weight_scale"
+      ],
+      "outputs": [
+        "conv3.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv3/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/pool1/MaxPool_output_0_scale",
+        "conv3.weight_scale"
+      ],
+      "outputs": [
+        "/conv3/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv3/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/pool1/MaxPool_output_0_quantized",
+        "conv3.weight_quantized",
+        "/pool1/MaxPool_output_0_zero_point",
+        "conv3.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv3/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv3.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv3.bias",
+        "conv3.bias_scale"
+      ],
+      "outputs": [
+        "conv3.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv3.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv3.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv3.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv3.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv3.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv3.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv3.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv3.bias_quantized",
+        "conv3.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv3/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv3.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv3/Conv_output_0_output_quantized",
+        "/conv3/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv3/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv3/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv3/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv3/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv3/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv3/Conv_output_0_bias_add_cast_output",
+        "/conv3/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv3/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_2",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv3/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_2_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_2_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Relu_2_output_0"
+      ],
+      "outputs": [
+        "/Relu_2_output_0_quantized",
+        "/Relu_2_output_0_scale",
+        "/Relu_2_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv4.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_2_output_0_scale",
+        "conv4.weight_scale"
+      ],
+      "outputs": [
+        "conv4.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv4/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_2_output_0_scale",
+        "conv4.weight_scale"
+      ],
+      "outputs": [
+        "/conv4/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv4/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/Relu_2_output_0_quantized",
+        "conv4.weight_quantized",
+        "/Relu_2_output_0_zero_point",
+        "conv4.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv4/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv4.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv4.bias",
+        "conv4.bias_scale"
+      ],
+      "outputs": [
+        "conv4.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv4.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv4.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv4.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv4.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv4.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv4.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv4.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv4.bias_quantized",
+        "conv4.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv4/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv4.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv4/Conv_output_0_output_quantized",
+        "/conv4/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv4/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv4/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv4/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv4/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv4/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv4/Conv_output_0_bias_add_cast_output",
+        "/conv4/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv4/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_3",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv4/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_3_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_3_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Relu_3_output_0"
+      ],
+      "outputs": [
+        "/Relu_3_output_0_quantized",
+        "/Relu_3_output_0_scale",
+        "/Relu_3_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv5.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_3_output_0_scale",
+        "conv5.weight_scale"
+      ],
+      "outputs": [
+        "conv5.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv5/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_3_output_0_scale",
+        "conv5.weight_scale"
+      ],
+      "outputs": [
+        "/conv5/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv5/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/Relu_3_output_0_quantized",
+        "conv5.weight_quantized",
+        "/Relu_3_output_0_zero_point",
+        "conv5.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv5/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          5,
+          5
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv5.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv5.bias",
+        "conv5.bias_scale"
+      ],
+      "outputs": [
+        "conv5.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv5.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv5.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv5.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv5.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv5.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv5.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv5.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv5.bias_quantized",
+        "conv5.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv5/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv5.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv5/Conv_output_0_output_quantized",
+        "/conv5/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv5/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv5/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv5/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv5/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv5/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv5/Conv_output_0_bias_add_cast_output",
+        "/conv5/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv5/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_4",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv5/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_4_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_4_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Relu_4_output_0"
+      ],
+      "outputs": [
+        "/Relu_4_output_0_quantized",
+        "/Relu_4_output_0_scale",
+        "/Relu_4_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv6.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_4_output_0_scale",
+        "conv6.weight_scale"
+      ],
+      "outputs": [
+        "conv6.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv6/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_4_output_0_scale",
+        "conv6.weight_scale"
+      ],
+      "outputs": [
+        "/conv6/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv6/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/Relu_4_output_0_quantized",
+        "conv6.weight_quantized",
+        "/Relu_4_output_0_zero_point",
+        "conv6.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv6/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          5,
+          5
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv6.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv6.bias",
+        "conv6.bias_scale"
+      ],
+      "outputs": [
+        "conv6.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv6.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv6.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv6.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv6.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv6.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv6.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv6.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv6.bias_quantized",
+        "conv6.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv6/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv6.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv6/Conv_output_0_output_quantized",
+        "/conv6/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv6/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv6/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv6/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv6/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv6/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv6/Conv_output_0_bias_add_cast_output",
+        "/conv6/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv6/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_5",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv6/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_5_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_5_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Relu_5_output_0"
+      ],
+      "outputs": [
+        "/Relu_5_output_0_quantized",
+        "/Relu_5_output_0_scale",
+        "/Relu_5_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv7.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_5_output_0_scale",
+        "conv7.weight_scale"
+      ],
+      "outputs": [
+        "conv7.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv7/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_5_output_0_scale",
+        "conv7.weight_scale"
+      ],
+      "outputs": [
+        "/conv7/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv7/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/Relu_5_output_0_quantized",
+        "conv7.weight_quantized",
+        "/Relu_5_output_0_zero_point",
+        "conv7.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv7/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv7.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv7.bias",
+        "conv7.bias_scale"
+      ],
+      "outputs": [
+        "conv7.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv7.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv7.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv7.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv7.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv7.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv7.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv7.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv7.bias_quantized",
+        "conv7.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv7/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv7.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv7/Conv_output_0_output_quantized",
+        "/conv7/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv7/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv7/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv7/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv7/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv7/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv7/Conv_output_0_bias_add_cast_output",
+        "/conv7/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv7/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_6",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv7/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_6_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_6_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Relu_6_output_0"
+      ],
+      "outputs": [
+        "/Relu_6_output_0_quantized",
+        "/Relu_6_output_0_scale",
+        "/Relu_6_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv8.bias_scale_node",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_6_output_0_scale",
+        "conv8.weight_scale"
+      ],
+      "outputs": [
+        "conv8.bias_scale"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv8/Conv_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Relu_6_output_0_scale",
+        "conv8.weight_scale"
+      ],
+      "outputs": [
+        "/conv8/Conv_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv8/Conv_quant",
+      "op_type": "ConvInteger",
+      "inputs": [
+        "/Relu_6_output_0_quantized",
+        "conv8.weight_quantized",
+        "/Relu_6_output_0_zero_point",
+        "conv8.weight_zero_point"
+      ],
+      "outputs": [
+        "/conv8/Conv_output_0_output_quantized"
+      ],
+      "attributes": {
+        "auto_pad": "NOTSET",
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "conv8.bias_tmp_qaunt",
+      "op_type": "Div",
+      "inputs": [
+        "conv8.bias",
+        "conv8.bias_scale"
+      ],
+      "outputs": [
+        "conv8.bias_tmp_quant:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv8.bias_quant_rounded",
+      "op_type": "Floor",
+      "inputs": [
+        "conv8.bias_tmp_quant:0"
+      ],
+      "outputs": [
+        "conv8.bias_quant_rounded:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv8.bias_quantized_node",
+      "op_type": "Cast",
+      "inputs": [
+        "conv8.bias_quant_rounded:0"
+      ],
+      "outputs": [
+        "conv8.bias_quantized"
+      ],
+      "attributes": {
+        "to": 6
+      }
+    },
+    {
+      "name": "conv8.bias_quantizedreshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "conv8.bias_quantized",
+        "conv8.bias_quantized_reshape_shape"
+      ],
+      "outputs": [
+        "/conv8/Conv_output_0_reshape"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "conv8.bias_quantizedbias_add",
+      "op_type": "Add",
+      "inputs": [
+        "/conv8/Conv_output_0_output_quantized",
+        "/conv8/Conv_output_0_reshape"
+      ],
+      "outputs": [
+        "/conv8/Conv_output_0_bias_add"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/conv8/Conv_output_0_bias_add_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "/conv8/Conv_output_0_bias_add"
+      ],
+      "outputs": [
+        "/conv8/Conv_output_0_bias_add_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/conv8/Conv_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/conv8/Conv_output_0_bias_add_cast_output",
+        "/conv8/Conv_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "/conv8/Conv_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Relu_7",
+      "op_type": "Relu",
+      "inputs": [
+        "/conv8/Conv_output_0"
+      ],
+      "outputs": [
+        "/Relu_7_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/pool2/MaxPool",
+      "op_type": "MaxPool",
+      "inputs": [
+        "/Relu_7_output_0"
+      ],
+      "outputs": [
+        "/pool2/MaxPool_output_0"
+      ],
+      "attributes": {
+        "ceil_mode": 0,
+        "kernel_shape": [
+          2,
+          2
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          2,
+          2
+        ],
+        "auto_pad": "NOTSET",
+        "storage_order": 0
+      }
+    },
+    {
+      "name": "/Reshape",
+      "op_type": "Reshape",
+      "inputs": [
+        "/pool2/MaxPool_output_0",
+        "/Concat_output_0"
+      ],
+      "outputs": [
+        "/Reshape_output_0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/Reshape_output_0_QuantizeLinear",
+      "op_type": "DynamicQuantizeLinear",
+      "inputs": [
+        "/Reshape_output_0"
+      ],
+      "outputs": [
+        "/Reshape_output_0_quantized",
+        "/Reshape_output_0_scale",
+        "/Reshape_output_0_zero_point"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/fc/Gemm_MatMul_quant_scales_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "/Reshape_output_0_scale",
+        "fc.weight_scale"
+      ],
+      "outputs": [
+        "/fc/Gemm_MatMul_quant_scales_mul:0"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/fc/Gemm_MatMul_quant",
+      "op_type": "MatMulInteger",
+      "inputs": [
+        "/Reshape_output_0_quantized",
+        "fc.weight_quantized",
+        "/Reshape_output_0_zero_point",
+        "fc.weight_zero_point"
+      ],
+      "outputs": [
+        "output_0_MatMul_output_quantized"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "output_0_MatMul_output_quantized_cast",
+      "op_type": "Cast",
+      "inputs": [
+        "output_0_MatMul_output_quantized"
+      ],
+      "outputs": [
+        "output_0_MatMul_output_quantized_cast_output"
+      ],
+      "attributes": {
+        "to": 1
+      }
+    },
+    {
+      "name": "/fc/Gemm_MatMul_quant_output_scale_mul",
+      "op_type": "Mul",
+      "inputs": [
+        "output_0_MatMul_output_quantized_cast_output",
+        "/fc/Gemm_MatMul_quant_scales_mul:0"
+      ],
+      "outputs": [
+        "output_0_MatMul"
+      ],
+      "attributes": {}
+    },
+    {
+      "name": "/fc/Gemm_Add",
+      "op_type": "Add",
+      "inputs": [
+        "output_0_MatMul",
+        "fc.bias"
+      ],
+      "outputs": [
+        "output_0"
+      ],
+      "attributes": {}
+    }
+  ]
+}
